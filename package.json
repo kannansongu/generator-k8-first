@@ -1,0 +1,33 @@
+{
+  "name": "generator-k8-first",
+  "version": "0.0.1",
+  "description": "yeoman generator for node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kannansongu/generator-k8-first.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "nodejs",
+    "scaffold",
+    "javascript"
+  ],
+  "author": "Kannan <lotus.kannan1984@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kannansongu/generator-k8-first/issues"
+  },
+  "homepage": "https://github.com/kannansongu/generator-k8-first#readme",
+  "dependencies": {
+    "decamelize": "^3.2.0",
+    "uppercamelcase": "^3.0.0",
+    "yeoman-generator": "^4.2.0"
+  },
+  "files": [
+    "app"
+  ]
+}
