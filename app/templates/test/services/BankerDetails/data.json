@@ -1,0 +1,373 @@
+{
+	"np1": {
+		"testValidRoles1": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles2": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles3": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles4": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "RBP",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Deposit Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles5": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "RBP",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Deposit Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles6": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "RBP",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Deposit Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles7": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "RBP",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Deposit Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles8": {
+			"response": [
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Preferred Banking Officer",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "RBP",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Deposit Officer",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "jciterin@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles9": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Relationship Manager",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "GT",
+					"Email": "getang@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles10": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Relationship Manager",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "GT",
+					"Email": "getang@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles11": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Relationship Manager",
+					"return_cd": 1,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "GT",
+					"Email": "getang@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 1,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles12": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Loan Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "GT",
+					"Email": "getang@firstrepublic.com",
+					"Role": "Client Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testValidRoles13": {
+			"response": [
+				{
+					"Initials": "NSA",
+					"Email": "nagarwal@firstrepublic.com",
+					"Role": "Preferred Banker",
+					"return_cd": 0,
+					"return_msg": "Success"
+				},
+				{
+					"Initials": "JRC",
+					"Email": "rpence@firstrepublic.com",
+					"Role": "Loan Officer",
+					"return_cd": 0,
+					"return_msg": "Success"
+				}
+			]
+		},
+		"testInvalidRoles1": {
+			"response": [
+			]
+		},
+		"properRequestWithValidGCID": {
+			"params": {
+				"inputParams": {
+					"gcid": "158"
+				},
+				"correlationId": "code_properRequestWithValidGCID"
+			},
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"improperRequestMalformedGCID": {
+			"params": {
+				"inputParams": {
+					"gcid": "emfweifmw"
+				},
+				"correlationId": "code_improperRequestMalformedGCID"
+			},
+			"expected_results": {
+				"response_code": 500
+			}
+		},
+		"improperRequestUnknownGCID": {
+			"params": {
+				"inputParams": {
+					"gcid": "281221"
+				},
+				"correlationId": "code_improperRequestUnknownGCID"
+			},
+			"expected_results": {
+				"response_code": 500
+			}
+		}
+	}
+}

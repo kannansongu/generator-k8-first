@@ -1,0 +1,109 @@
+{
+	"NodeServer": {
+		"host": {
+			"port": 3905
+		},
+		"ServerJwtCertificate": {
+			"certificate": "__jwt_certificate__",
+			"symmetricKey": "__symmetric_key__"
+		},
+		"TokenServer": {
+			"protocol": "https",
+			"host": "cidms.firstrepublic.com",
+			"port": 3000,
+			"resource": "/as/token.oauth2",
+			"params": {
+				"grant_type": "password",
+				"client_id": "__ping_client_id__",
+				"client_secret": "__ping_client_secret__",
+				"username": "__ping_username__",
+				"password": "__ping_password__",
+				"scope": "openid profile Q2"
+			}
+		},
+		"DigitalWebDB": {
+			"windowsAuth": {
+				"username": "__digitalDBUsername__",
+				"password": "__digitalDBPassword__",
+				"database": "__digitalDB__",
+				"host": "dc1idmsqlcls",
+				"domain": "PROD"
+			}
+		},
+		"DigitalWebDB_RO": {
+			"windowsAuth": {
+				"username": "__digitalDBROUsername__",
+				"password": "__digitalDBROPassword__",
+				"database": "__digitalDBRO__",
+				"host": "dc2idmsqlcls",
+				"domain": "FRB"
+			},
+			"poolConfig": {
+				"maxConnections": 15,
+				"minConnections": 1,
+				"idleTime": 15000,
+				"acquireTime": 15000,
+				"evictTime": 15000,
+				"retryMax": 2
+			},
+			"retryConfig": {
+				"retryMatch": [
+					"ETIMEDOUT",
+					"EHOSTUNREACH",
+					"ECONNRESET",
+					"ECONNREFUSED",
+					"ETIMEDOUT",
+					"ESOCKETTIMEDOUT",
+					"EHOSTUNREACH",
+					"EPIPE",
+					"EAI_AGAIN",
+					"SequelizeConnectionError",
+					"SequelizeConnectionRefusedError",
+					"SequelizeHostNotFoundError",
+					"SequelizeHostNotReachableError",
+					"SequelizeInvalidConnectionError",
+					"SequelizeConnectionTimedOutError"
+				],
+				"retryMax": 3
+			}
+		},
+		"PeopleDB": {
+			"windowsAuth": {
+				"username": "__digitalDBUsername__",
+				"password": "__digitalDBPassword__",
+				"database": "FRCPeople",
+				"host": "vdbFRCPeople",
+				"domain": "FRB"
+			},
+			"poolConfig": {
+				"maxConnections": 15,
+				"minConnections": 1,
+				"idleTime": 15000,
+				"acquireTime": 15000,
+				"evictTime": 15000,
+				"retryMax": 2
+			},
+			"retryConfig": {
+				"retryMatch": [
+					"ETIMEDOUT",
+					"EHOSTUNREACH",
+					"ECONNRESET",
+					"ECONNREFUSED",
+					"ETIMEDOUT",
+					"ESOCKETTIMEDOUT",
+					"EHOSTUNREACH",
+					"EPIPE",
+					"EAI_AGAIN",
+					"SequelizeConnectionError",
+					"SequelizeConnectionRefusedError",
+					"SequelizeHostNotFoundError",
+					"SequelizeHostNotReachableError",
+					"SequelizeInvalidConnectionError",
+					"SequelizeConnectionTimedOutError"
+				],
+				"retryMax": 3
+			}
+		},
+		"checkForPeopleDBStatus": false
+	}
+}

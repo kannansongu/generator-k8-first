@@ -1,0 +1,5 @@
+test/services/BankerDetails/GetBankerDetailsTests.js
+test/services/StatusService/StatusServiceTests.js
+test/services/OfficersDetail/OfficersDetailTests.js
+
+--compilers js:babel-register

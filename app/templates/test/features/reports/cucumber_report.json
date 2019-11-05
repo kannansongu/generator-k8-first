@@ -1,0 +1,1044 @@
+[
+  {
+    "description": "    Consumers should be able to send GET requests to the StoredProcedure that accesses\n    the DigitalWeb SQL Database in order to retrieve prospect records.",
+    "keyword": "Feature",
+    "name": "Testing for Service",
+    "line": 3,
+    "id": "testing-for-service",
+    "tags": [
+      {
+        "name": "@digital-service-banker-assignment-test",
+        "line": 1
+      }
+    ],
+    "uri": "test\\features\\getProspectInquiries.feature",
+    "elements": [
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"Waru\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"Waru\" and emailAddress is \"Waruto@example.com\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"Waru\" and emailAddress is \"Waruto@example.com\" and phone is \"555-555-5555\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"0\" and firstName is \"Waru\" and lastName is \"Waru\" and emailAddress is \"Waruto@example.com\" and phone is \"555-555-5555\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"W\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "  This scenario tests that data was successfully retrieved from the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"W\" and emailAddress is \"waru@example.com\" and phone is \"555-555-5555\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the ProspectInquiries microservice is invoked, it should return the response object containing the latest prospect information",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:152"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\t\tThis scenario tests that there was no record from the database that corresponds to the input parameters.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"noRecords\" and lastName is \"notinDB\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to No Records Found",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\t\tThis scenario tests that there was no record from the database that corresponds to the input parameters.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"noRecords\" and lastName is \"notinDB\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to No Records Found",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\t\tThis scenario tests that there was no record from the database that corresponds to the input parameters.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"noRecords\" and lastName is \"notinDB\" and emailAddress is \"fake@fake.com\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to No Records Found",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\t\tThis scenario tests that there was no record from the database that corresponds to the input parameters.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"noRecords\" and lastName is \"notinDB\" and emailAddress is \"\" and phone is \"123-543-7653\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to No Records Found",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\t\tThis scenario tests that there was no record from the database that corresponds to the input parameters.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "that formId is \"aio-est\" and status is \"1\" and firstName is \"noRecords\" and lastName is \"notinDB\" and emailAddress is \"fake@fake.com\" and phone is \"123-543-7653\" and withinLastNumHours is \"72\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to No Records Found",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:235"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests that there was a validation error and the service never accesses the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 38
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to Validation Error",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:272"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests that there was a validation error and the service never accesses the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 48,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 38
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "that formId is \"aio-est\" and status is \"0\" and firstName is \"Waru\" and lastName is \"\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to Validation Error",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:272"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests that there was a validation error and the service never accesses the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 49,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 38
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"Waru\" and lastName is \"\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"72\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to Validation Error",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:272"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests that there was a validation error and the service never accesses the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 38
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "that formId is \"aio-est\" and status is \"\" and firstName is \"\" and lastName is \"Waru\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to Validation Error",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:272"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests that there was a validation error and the service never accesses the database.",
+        "id": "testing-for-service;retrieves-datasets-from-database-and-returns-response-object.",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Retrieves datasets from database and returns response object.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 38
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 42,
+            "name": "that formId is \"aio-est\" and status is \"0\" and firstName is \"\" and lastName is \"Waru\" and emailAddress is \"\" and phone is \"\" and withinLastNumHours is \"72\"",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 43,
+            "name": "the ProspectInquiries microservice is invoked, it should return an error object corresponding to Validation Error",
+            "match": {
+              "location": "test\\features\\steps\\getprospectinquiries-steps.js:272"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "\tConsumers should be able to send GET and PUT requests to the StoredProcedure that accesses\n\tthe DigitalWeb SQL Database in order to retrieve prospect records or to insert/update prospect records.",
+    "keyword": "Feature",
+    "name": "Testing for Service",
+    "line": 3,
+    "id": "testing-for-service",
+    "tags": [
+      {
+        "name": "@digital-service-banker-assignment-test",
+        "line": 1
+      }
+    ],
+    "uri": "test\\features\\putProspectInquiries.feature",
+    "elements": [
+      {
+        "description": "\tThis scenario tests for whether the data was successfully inserted into the database for the first time\n\tand a formInstanceKey was generated and returned.",
+        "id": "testing-for-service;insert-the-form-data-into-the-database.",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Insert the form data into the database.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_001",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "that the formInstanceKey is 0 and formId is \"aio-est\" and formData is '[{ \"field\": \"First Name\", \"value\": \"Waru\" }, { \"field\": \"Email Address\", \"value\": \"waru@example.com\" }, { \"field\": \"Last Name\", \"value\": \"W\" }, { \"field\": \"Phone\", \"value\": \"555-555-5555\" }, { \"field\": \"Zip Code\", \"value\": \"94530\" }, { \"field\": \"Company\", \"value\": \"First Republic\" }]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "the microservice is invoked, the inputs should be passed into the StoredProc to write into the DB and return the formInstanceKey",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests for whether the data was successfully updated in the database\n\tand a formInstanceKey was returned.",
+        "id": "testing-for-service;update-the-form-data-in-the-database.",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Update the form data in the database.",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_002",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "that the formInstanceKey is 1 and formId is \"\" and formData is '[{ \"field\": \"First Name\", \"value\": \"Maru\" }, { \"field\": \"Email Address\", \"value\": \"maru@example.com\" }, { \"field\": \"Last Name\", \"value\": \"M\" }, { \"field\": \"Phone\", \"value\": \"555-555-5555\" }, { \"field\": \"Zip Code\", \"value\": \"94530\" }, { \"field\": \"Country\", \"value\": \"Japan\" }]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "the microservice is invoked, the inputs should be passed into the StoredProc to up into the DB and return the formInstanceKey",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests for whether the data was successfully updated into the database\n\tand a formInstanceKey was returned.",
+        "id": "testing-for-service;failed-to-update-form-because-of-bad-forminstancekey",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Failed to update form because of bad formInstanceKey",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_003",
+            "line": 32
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "that the formInstanceKey is 443 and formId is \"\" and formData is '[{ \"field\": \"Phone\", \"value\": \"555-555-5555\" }, { \"field\": \"Zip Code\", \"value\": \"94530\" }, { \"field\": \"Country\", \"value\": \"Japan\" }]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "the microservice is invoked, the inputs should be passed into the StoredProc to update into the DB and return the formInstanceKey. But invalid formInstanceKey",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:160"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests for whether the data was successfully updated into the database\n\tand a formInstanceKey was returned.",
+        "id": "testing-for-service;failed-to-insert-to-database",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "Failed to insert to database",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_004",
+            "line": 44
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 49,
+            "name": "that the formInstanceKey is 0 and formId is \"aio-est\" and formData is '[]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "the microservice is invoked, the inputs should be passed into the StoredProc to insert into the DB and return the formInstanceKey. But no form data was given",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:174"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests for whether the data was successfully updated into the database\n\tand a formInstanceKey was returned.",
+        "id": "testing-for-service;failed-to-insert-to-database",
+        "keyword": "Scenario",
+        "line": 65,
+        "name": "Failed to insert to database",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_005",
+            "line": 56
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 61,
+            "name": "that the formInstanceKey is 0 and formId is \"aio-est\" and formData is '[{ \"field\": \"Country\", \"value\": \"Japan\" }]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 62,
+            "name": "formId is given but formData did not give the correct required fields and values",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "description": "\tThis scenario tests for whether the data was successfully updated into the database\n\tand a formInstanceKey was returned.",
+        "id": "testing-for-service;not-given-forminstancekey-and-formid",
+        "keyword": "Scenario",
+        "line": 77,
+        "name": "Not given formInstanceKey and formId",
+        "tags": [
+          {
+            "name": "@digital-service-banker-assignment-test",
+            "line": 1
+          },
+          {
+            "name": "@TC_006",
+            "line": 68
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 73,
+            "name": "that the formInstanceKey is 0 and formId is \"\" and formData is '[{ \"field\": \"Country\", \"value\": \"Japan\" }]'",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 74,
+            "name": "formId is given formId and formInstanceKey is not given",
+            "match": {
+              "location": "test\\features\\steps\\putprospectinquiries-steps.js:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

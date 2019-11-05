@@ -1,0 +1,112 @@
+{
+	"NodeServer": {
+		"logger": {
+			"level": "debug"
+		},
+		"host": {
+			"port": 3905
+		},
+		"ServerJwtCertificate": {
+			"certificate": "-----BEGIN CERTIFICATE-----\nMIIDnDCCAoSgAwIBAgIGAWJG11/sMA0GCSqGSIb3DQEBCwUAMIGOMQswCQYDVQQG\nEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHDAaBgNV\nBAoTE0ZpcnN0IFJlcHVibGljIEJhbmsxHTAbBgNVBAsTFERpZ2l0YWwgVGVjaG5v\nbG9naWVzMR0wGwYDVQQDExRRMk1pY3JvU2VydmljZUNsaWVudDAeFw0xODAzMjEw\nNDM1NDJaFw0xOTAzMjEwNDM1NDJaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMC\nQ0ExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xHDAaBgNVBAoTE0ZpcnN0IFJlcHVi\nbGljIEJhbmsxHTAbBgNVBAsTFERpZ2l0YWwgVGVjaG5vbG9naWVzMR0wGwYDVQQD\nExRRMk1pY3JvU2VydmljZUNsaWVudDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC\nAQoCggEBAJkJkUa6PEPMhUsyGGqG6O9couSEgNstxNAx2PjDQSe+sAJ8CwkZvLne\nACkULBlyknIAKDPQJzLMGo8lCuuDqgTel2jrlWPb7Yt3yWBEQJTUCoVniVBYTlYP\n0Oz+27ONxNpyNIOsiEo/PFySwr6757y1wKpWqPR3vLrwHYqC49DEkouG55kK63lA\nXgMeVEV06Fk+6smB3L0eHvX6Ad3at3pdvSOnRUqnDo8gUu6YU2Ed6Qc3Tkt5dM4D\nY7HyaqzX62B+UhqgW6JDLPoOHI4jm+N1PQtGGtllntpU+B+0TrgHNHkC62NC+/b4\nh0vZtUfplTg/dDktzqQzzeCa5ZK5Y8cCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEA\nPdsKz61BRLRkcCBe6HJ8l1swhWMJTKRyT6zQUCMLJ7Tit8M6hI13FMFIkK+e1lAw\nXjNKl4dcx6X6wB/Z77yXFyEmztRd7YdtiUBR+8GSGjpGrPSJVowoiNgRs7LOl/b6\nk5cPfz4G/319uqW03ge1/Gl1xHPxCoiYXAmGjG8Yxh0bv6rVZCYQ7NwuGJk2YrKP\nTe2fUgcGtwHWxlDUbJrFUtf5cTzn1x3aTVnpoJeEQTdCpke4FYX5osKF3ML6KLyA\n51Ib0O5DVZvTMz+8k3Oe/+xCAzV2rticNLG10tbtfQtRH88CAm2zMjGp5Afj+V31\nWlZncRvCLGFvm/KUVnEkZA==\n-----END CERTIFICATE-----",
+			"symmetricKey": "IEbiqNYwmjldulxk"
+		},
+		"TokenServer": {
+			"protocol": "https",
+			"host": "cidmsrh.frbnp1.com",
+			"port": 3000,
+			"resource": "/as/token.oauth2",
+			"params": {
+				"grant_type": "password",
+				"client_id": "Q2Customer",
+				"client_secret": "NDNCilc6d29qFIyTDBopFn9nenUvUscS86eicKLcLyRgEtEFCsVEIJKraZM5RtNE",
+				"username": "Nirmal121",
+				"password": "Frb@123!",
+				"scope": "openid profile Q2"
+			}
+		},
+		"DigitalWebDB": {
+			"windowsAuth": {
+				"username": "Z_digitalaccount",
+				"password": "G!@5E@eVi8ostA",
+				"database": "KYCBusiness01",
+				"host": "NP1SQLEE01V",
+				"domain": "NP1"
+			}
+		},
+		"DigitalWebDB_RO": {
+			"windowsAuth": {
+				"username": "z_ms_digitalweb",
+				"password": "GsSpring5015!!",
+				"database": "DigitalWeb",
+				"host": "np1idmsqles01v",
+				"domain": "NP1"
+			},
+			"poolConfig": {
+				"maxConnections": 15,
+				"minConnections": 1,
+				"idleTime": 15000,
+				"acquireTime": 15000,
+				"evictTime": 15000,
+				"retryMax": 2
+			},
+			"retryConfig": {
+				"retryMatch": [
+					"ETIMEDOUT",
+					"EHOSTUNREACH",
+					"ECONNRESET",
+					"ECONNREFUSED",
+					"ETIMEDOUT",
+					"ESOCKETTIMEDOUT",
+					"EHOSTUNREACH",
+					"EPIPE",
+					"EAI_AGAIN",
+					"SequelizeConnectionError",
+					"SequelizeConnectionRefusedError",
+					"SequelizeHostNotFoundError",
+					"SequelizeHostNotReachableError",
+					"SequelizeInvalidConnectionError",
+					"SequelizeConnectionTimedOutError"
+				],
+				"retryMax": 3
+			}
+		},
+		"PeopleDB": {
+			"windowsAuth": {
+				"username": "Z_digitalaccount",
+				"password": "G!@5E@eVi8ostA",
+				"database": "FRCPeople",
+				"host": "vdbFRCPeople",
+				"domain": "NP1"
+			},
+			"poolConfig": {
+				"maxConnections": 15,
+				"minConnections": 1,
+				"idleTime": 15000,
+				"acquireTime": 15000,
+				"evictTime": 15000,
+				"retryMax": 2
+			},
+			"retryConfig": {
+				"retryMatch": [
+					"ETIMEDOUT",
+					"EHOSTUNREACH",
+					"ECONNRESET",
+					"ECONNREFUSED",
+					"ETIMEDOUT",
+					"ESOCKETTIMEDOUT",
+					"EHOSTUNREACH",
+					"EPIPE",
+					"EAI_AGAIN",
+					"SequelizeConnectionError",
+					"SequelizeConnectionRefusedError",
+					"SequelizeHostNotFoundError",
+					"SequelizeHostNotReachableError",
+					"SequelizeInvalidConnectionError",
+					"SequelizeConnectionTimedOutError"
+				],
+				"retryMax": 3
+			}
+		},
+		"checkForPeopleDBStatus": false
+	}
+}

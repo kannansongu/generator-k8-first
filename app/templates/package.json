@@ -1,43 +1,72 @@
 {
-  "name": "conduit-node",
+  "name": "digital-services-banker-assignment",
   "version": "1.0.0",
-  "description": "conduit on node",
-  "main": "app.js",
+  "description": "A NodeJS-based microservice used as a RESTful interface for CustDM operations",
+  "author": "Nik Agarwal <nagarwal@firstrepublic.com>",
+  "main": "src/app.js",
   "scripts": {
-    "mongo:start": "docker run --name realworld-mongo -p 27017:27017 mongo & sleep 5",
-    "start": "node ./app.js",
-    "dev": "nodemon ./app.js",
-    "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
-    "stop": "lsof -ti :3000 | xargs kill",
-    "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo"
+    "build": "./node_modules/.bin/babel -d ./lib -D -s inline --minified ./src",
+    "cucumber": "node ./node_modules/cucumber/bin/cucumber-js ./test/features -f json:./test/features/reports/cucumber_report.json",
+    "cucumber-report": "node ./node_modules/nextgen-module-cucumber-reporter/lib/create-report.js",
+    "dev": "node src/app.js",
+    "start": "node lib/app.js",
+    "lint": "./node_modules/.bin/eslint --fix ./src",
+    "test": "./node_modules/.bin/mocha --timeout 5000",
+    "test-cov": "./node_modules/.bin/nyc --cache node_modules/mocha/bin/_mocha --timeout 2000 && ./node_modules/.bin/nyc report --reporter=lcov"
   },
+  "keywords": [
+    "banker",
+    "assignment",
+    "bankerassignment"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gothinkster/productionready-node-api.git"
+    "url": "https://github.firstrepublic.com/FRB/digital-service-banker-assignment-test.git"
   },
-  "license": "ISC",
+  "license": "Unlicense",
   "dependencies": {
-    "body-parser": "1.15.0",
-    "cors": "2.7.1",
-    "ejs": "2.4.1",
-    "errorhandler": "1.4.3",
-    "express": "4.13.4",
-    "express-jwt": "3.3.0",
-    "express-session": "1.13.0",
-    "jsonwebtoken": "7.1.9",
-    "method-override": "2.3.5",
-    "methods": "1.1.2",
-    "mongoose": "4.4.10",
-    "mongoose-unique-validator": "1.0.2",
-    "morgan": "1.7.0",
-    "passport": "0.3.2",
-    "passport-local": "1.0.0",
-    "request": "2.69.0",
-    "slug": "0.9.1",
-    "underscore": "1.8.3"
+    "babel-register": "6.26.0",
+    "connect": "3.6.6",
+    "js-yaml": "3.10.0",
+    "moment": "2.20.1",
+    "nextgen-module-config": "^1.0.3",
+    "nextgen-module-token": "1.1.4",
+    "sequelize": "^4.13.8",
+    "swagger-data-gen": "0.2.0-beta.1",
+    "swagger-express-mw": "0.7.0",
+    "swagger-methods": "1.0.4",
+    "swagger-server": "1.0.0-alpha.18",
+    "swagger-tools": "0.10.1-validate",
+    "tedious": "2.1.5",
+    "uuid": "3.2.1",
+    "winston": "2.4.1",
+    "winston-daily-rotate-file": "3.0.1"
   },
   "devDependencies": {
-    "newman": "^3.8.2",
-    "nodemon": "^1.11.0"
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "6.1.2",
+    "chai": "^3.5.0",
+    "cucumber": "4.1.0",
+    "eslint": "3.19.0",
+    "mocha": "^3.5.3",
+    "nextgen-module-cucumber-reporter": "1.0.0",
+    "node-mocks-http": "^1.6.7",
+    "nyc": "8.4.0",
+    "soap": "0.23.0"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "exclude": [
+      "node_modules",
+      "test",
+      "npm-modules",
+      "lib",
+      "coverage"
+    ]
   }
 }

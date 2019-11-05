@@ -1,0 +1,41 @@
+kind: DeploymentConfig
+apiVersion: v1
+metadata:
+  namespace: dct-nextgen-services
+  name: digital-service-banker-assignment-test-apiserver
+spec:
+  template:
+    metadata:
+      labels:
+        name: digital-service-banker-assignment-test-apiserver
+    spec:
+      containers:
+        - name: digital-service-banker-assignment-test-apiserver
+          image: digital-service-banker-assignment-test-apiserver:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: FRB_SECRET_PATH
+              value: "/nodeapp/secrets"
+            - name: FRB_CONFIGMAP_PATH
+              value: "/nodeapp/configmap"
+            - name: ENVIRONMENT
+              value: "np3"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /nodeapp/configmap
+              readOnly: true
+            - name: secret-volume
+              mountPath: /nodeapp/secrets
+              readOnly: true
+          ports:
+            - containerPort: 3905
+      volumes:
+        - name: config-volume
+          configMap:
+            name: digital-service-banker-assignment-test
+        - name: secret-volume
+          secret:
+            secretName: digital-service-banker-assignment-test-secret
+  selector:
+    name: digital-service-banker-assignment-test-apiserver
+  replicas: 1

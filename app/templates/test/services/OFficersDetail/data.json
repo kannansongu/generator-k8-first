@@ -1,0 +1,218 @@
+{
+	"np1": {
+		"properRequestCommaSeparatedInitialsWithStatus_1": {
+			"params": {
+				"initials": "JKL,KKK,CCC,KKK,CCC,KKK",
+				"activeStatus": "1",
+				"correlationId": "properRequestCommaSeparatedInitialsWithStatus_1"
+			},
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"properRequestInitialsWithStatus_1": {
+			"params": {
+				"initials": "JKL",
+				"activeStatus": "1",
+				"correlationId": "properRequestInitialsWithStatus_1"
+			},
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"properRequestAllWithStatus_1": {
+			"params": {
+				"initials": "ALL",
+				"activeStatus": "1",
+				"correlationId": "properRequestAllWithStatus_1"
+			},
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"successInsertOfficerDetails": {
+			"officerData": {
+				"Initials": "NNN",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst K",
+				"Email": "n@frb.com",
+				"Phone": "8889999888",
+				"BranchCode": "999",
+				"ActiveStatus": 1,
+				"InactiveDate": "",
+				"TerminationDate": "",
+				"StartDate": "",
+				"JobFunction": "Job1"
+			},
+			"correlationId": "successInsertOfficerDetails",
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"successUpdateOfficerDetails": {
+			"officerData": {
+				"Initials": "NNN",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst Updated",
+				"Email": "n@frb.com",
+				"Phone": "8889999888",
+				"BranchCode": "999",
+				"ActiveStatus": 1,
+				"InactiveDate": "",
+				"TerminationDate": "",
+				"StartDate": "",
+				"JobFunction": "Job1"
+			},
+			"correlationId": "successUpdateOfficerDetails",
+			"expected_results": {
+				"response_code": 200
+			}
+		},
+		"failureInsertOfficerDetails": {
+			"officerData": {
+				"Initials": "NNN",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst K",
+				"Email": "",
+				"Phone": "8889999888",
+				"BranchCode": "999",
+				"ActiveStatus": 1
+			},
+			"correlationId": "failureInsertOfficerDetails",
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"failureInsertOfficerDetails_InvalidInitials": {
+			"officerData": {
+				"Initials": "NNN@",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst K",
+				"Email": "",
+				"Phone": "8889999888",
+				"BranchCode": "999",
+				"ActiveStatus": 1
+			},
+			"correlationId": "failureInsertOfficerDetails_InvalidInitials",
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"failureUpdateOfficerDetails_InvalidActiveStatus": {
+			"officerData": {
+				"Initials": "NNN",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst Updated",
+				"Email": "nn@frb.com",
+				"Phone": "8889999888",
+				"BranchCode": "999",
+				"ActiveStatus": 2
+			},
+			"correlationId": "failureUpdateOfficerDetails_InvalidActiveStatus",
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"failureUpdateOfficerDetails": {
+			"officerData": {
+				"Initials": "NNN",
+				"FirstName": "NFirst",
+				"LastName": "NLast",
+				"FullName": "NFirst Updated",
+				"Email": "",
+				"Phone": "",
+				"BranchCode": "999",
+				"ActiveStatus": 2
+			},
+			"correlationId": "failureUpdateOfficerDetails",
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestNoRecordsFoundInitials": {
+			"params": {
+				"initials": "OOO",
+				"activeStatus": "1",
+				"correlationId": "code_improperRequestNoRecordsFoundInitials"
+			},
+			"expected_results": {
+				"response_code": 204
+			}
+		},
+		"improperRequestValidationErrorEmptyInitials": {
+			"params": {
+				"initials": "",
+				"activeStatus": "1",
+				"correlationId": "improperRequestValidationErrorEmptyInitials"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestValidationErrorEmptyStatus": {
+			"params": {
+				"initials": "JKL",
+				"activeStatus": "",
+				"correlationId": "improperRequestValidationErrorEmptyStatus"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestCommaSeparatedInitials400Error": {
+			"params": {
+				"initials": "JKL,KKK,CCC,,KKK,C#CC,KKK",
+				"activeStatus": "1",
+				"correlationId": "improperRequestCommaSeparatedInitials400Error"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestInitialsMaximumCharLimitExceeds400Error": {
+			"params": {
+				"initials": "JKL,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK",
+				"activeStatus": "1",
+				"correlationId": "improperRequestInitialsMaximumCharLimitExceeds400Error"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestInitialsMaximumElementsExceeds400Error": {
+			"params": {
+				"initials": "JKL,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC,KKK,CCC",
+				"activeStatus": "1",
+				"correlationId": "improperRequestInitialsMaximumElementsExceeds400Error"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestInvalidInitials400Error": {
+			"params": {
+				"initials": "J!L#",
+				"activeStatus": "1",
+				"correlationId": "code_improperRequestInvalidInitials400Error"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		},
+		"improperRequestInvalidStatus400Error": {
+			"params": {
+				"initials": "JKL",
+				"activeStatus": "2",
+				"correlationId": "code_improperRequestInvalidInitials400Error"
+			},
+			"expected_results": {
+				"response_code": 400
+			}
+		}
+	}
+}

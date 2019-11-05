@@ -1,0 +1,65 @@
+  - name: Deploy digital-service-banker-assignment-test
+    hosts: localhost
+    gather_facts: false
+    tasks:
+      - docker_service:
+            definition:
+                services: &id001
+                    apiserver:
+                        working_dir: /nodeapp
+                        image: digital-service-banker-assignment-test-apiserver:20180202211802
+                        command:
+                          - npm
+                          - run
+                          - start
+                        expose:
+                          - '3905'
+                        ports:
+                          - 3905:3905
+                version: '2'
+            state: present
+            project_name: digital-service-banker-assignment-test
+        tags:
+          - start
+      - docker_service:
+            definition:
+                services: *id001
+                version: '2'
+            state: present
+            project_name: digital-service-banker-assignment-test
+            restarted: true
+        tags:
+          - restart
+      - docker_service:
+            definition:
+                services: *id001
+                version: '2'
+            state: present
+            project_name: digital-service-banker-assignment-test
+            stopped: true
+        tags:
+          - stop
+      - docker_service:
+            definition:
+                services: *id001
+                version: '2'
+            state: absent
+            project_name: digital-service-banker-assignment-test
+            remove_volumes: yes
+        tags:
+          - destroy
+      - docker_image:
+            state: absent
+            force: yes
+            name: digital-service-banker-assignment-test-apiserver:20180202211802
+        tags: destroy
+      - docker_image:
+            state: absent
+            force: yes
+            name: digital-service-banker-assignment-test-apiserver:latest
+        tags: destroy
+      - docker_image:
+            state: absent
+            force: yes
+            name: digital-service-banker-assignment-test-conductor:latest
+        tags: destroy

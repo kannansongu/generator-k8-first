@@ -1,0 +1,211 @@
+---
+swagger: "2.0"
+info:
+  description: "A NodeJS-based micro service used as a RESTful interface for CustDM and DigitalWEB \
+    \ operations"
+  version: "1.0.0"
+  title: "<%= message %>"
+  contact:
+    name: "Nitesh Korat"
+    email: "nkorat@firstrepublic.com"
+
+basePath: "/bnkrasgnmttesttest/v1"
+tags:
+  - name: "Banker Details"
+    description: "Used to retrieve banker information"
+  - name: "Bank Officers Detail"
+    description: "Used to retrieve bank officers based on given initials and activeStatus"
+  - name: "Officers from PeopleDB"
+    description: "Used to retrieve all officers from peopleDB"
+  - name: "Status"
+    description: "Used to inform consumers of system status."
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  /MyFirstService:
+    get:
+      tags:
+        - "MyFirst Service"
+      summary: "Returns my first service details"
+      description: "This is created for skeleton of project"
+      operationId: "myFirsttDetails"
+      parameters:
+        - name: "test"
+          in: "query"
+          description: ""
+          type: "string"
+          required: false
+      responses:
+        200:
+          description: "Successfully returned response."
+          schema:
+            $ref: "#/definitions/Response"
+        204:
+          description: "The request was successful but no records were returned."
+        400:
+          description: "Indicates a client-side request. This could also include several\
+            \ subtypes. If it includes a FaultCode of 50003, this indicates an invalid\
+            \ request, such as a mandatory request field being left empty. A 50009\
+            \ FaultCode indicates that the account requested is not associated with\
+            \ the GlobalClientID that was supplied."
+          schema:
+            $ref: "#/definitions/Error"
+        401:
+          description: "Not authenticated."
+          schema:
+            $ref: "#/definitions/Error"
+        403:
+          description: "Access token does not have the required scope."
+          schema:
+            $ref: "#/definitions/Error"
+        500:
+          description: "A server-side error. This could include several FaultCode\
+            \ subtypes. A 500111 FaultCode indicates a source system timeout. A 50004\
+            \ FaultCode indicates that the transaction request was rejected by a source\
+            \ system due to a known error code, where that source system's error should\
+            \ be returned as a StackTrace. A 10002 FaultCode indicates an unhandled\
+            \ source system error, where the error itself is unknown and treated generically.\
+            \ Finally, a FaultCode value of 1 indicates a System Exception, where\
+            \ the error originated in this service itself, not in a source service."
+          schema:
+            $ref: "#/definitions/Error"
+        501:
+          description: "A server-side error indicating an unsupport source system.\
+            \ This will have a FaultCode of 50001, and happens when the account is\
+            \ associated with an unsupported source system."
+          schema:
+            $ref: "#/definitions/Error"
+        503:
+          description: "A server-side error that happens when a source system is unavailable."
+          schema:
+            $ref: "#/definitions/Error"
+      security:
+        - OAuth2:
+            - "read"
+      x-swagger-router-controller: "MyFirsttDetails"
+  /readyStatus:
+    get:
+      tags:
+        - "Status"
+      summary: "Gets the status of the entire given system, including all downstream\
+        \ systems."
+      operationId: "getReadyStatus"
+      parameters: []
+      responses:
+        200:
+          description: "Request was successful"
+          schema:
+            $ref: "#/definitions/readyStatus"
+      x-swagger-router-controller: "Status"
+  /liveStatus:
+    get:
+      tags:
+        - "Status"
+      summary: "Gets the status of the microservice itself."
+      operationId: "getLiveStatus"
+      parameters: []
+      responses:
+        200:
+          description: "Request was successful"
+          schema:
+            $ref: "#/definitions/liveStatus"
+      x-swagger-router-controller: "Status"
+securityDefinitions:
+  OAuth2:
+    type: "oauth2"
+    authorizationUrl: "https://cidmsrh.frbnp1.com:3000/as/token.oauth2/"
+    flow: "implicit"
+    scopes:
+      read: "Grants read access"
+      write: "Grants write access"
+definitions:
+  Response:
+    type: "object"
+    properties:
+      BankerInitials:
+        type: "string"
+        example: "AFW"
+        description: "The initials of the client's banker"
+      BankerEmail:
+        type: "string"
+        example: "AFW@firstrepublic.com"
+        description: "The email of the client's banker"
+      RMInitials:
+        type: "string"
+        example: "DQ1"
+        description: "The initials of the client's relationship manager"
+      RMEmail:
+        type: "string"
+        example: "DQ1@firstrepublic.com"
+        description: "The email of the client's relationship manager"
+  readyStatus:
+    type: "object"
+    properties:
+      Ready:
+        type: "boolean"
+        example: true
+      ReadyAsOf:
+        type: "string"
+        format: "date-time"
+        example: "2017-12-07T15:12:22Z"
+      FailedComponent:
+        type: "string"
+        example: "CustDM"
+        description: "On availability failure, provide the name of a failed component"
+    example:
+      Ready: true
+      FailedComponent: "MDM platform"
+      ReadyAsOf: "2017-12-07T15:12:22Z"
+  liveStatus:
+    type: "object"
+    properties:
+      Live:
+        type: "boolean"
+        example: true
+      LiveAsOf:
+        type: "string"
+        format: "date-time"
+        example: "2017-12-07T15:12:22Z"
+    example:
+      LiveAsOf: "2017-12-07T15:12:22Z"
+      Live: true
+  Error:
+    type: "object"
+    properties:
+      correlationId:
+        type: "string"
+        example: "ffce661e-b858-45a-8237-91d8141698e6"
+        description: "Return the correlationId from the original request"
+      status:
+        type: "integer"
+        example: 500
+        description: "http status code"
+      code:
+        type: "integer"
+        example: 50004
+        description: "Error code specifics to NextGen Services"
+      message:
+        type: "string"
+        example: "Transaction request was rejected by a source system due to a known\
+          \ error code"
+      stackTrace:
+        type: "string"
+        example: "Error stack trace."
+        description: "full error stack trance for debugging."
+      fields:
+        type: "array"
+        items:
+          $ref: "#/definitions/ErrorField"
+  ErrorField:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+        example: "GlobalClientTypeCode"
+        description: "Error field name"
+      value:
+        type: "string"
+        example: "Input"
+        description: "Error field type"

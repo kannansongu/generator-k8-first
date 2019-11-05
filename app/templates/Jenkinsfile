@@ -1,0 +1,43 @@
+pipeline {
+    agent {
+      node { label 'DCT_np1jenksl06v' }
+    }
+    options { skipDefaultCheckout() }
+    stages {
+       stage('checkout') {
+         steps {
+             echo "Git Pull from Repository"
+             sh 'ssh -t z_docker@np1microsvc1v "/home/NP1/z_docker/bin/runCheckout.sh -p digital-service-banker-assignment-test"'
+         }
+       }
+       stage('build') {
+         steps {
+             echo "Building service and Docker Image"
+             sh 'ssh -t z_docker@np1microsvc1v "/home/NP1/z_docker/bin/runOCPBuild.sh -p digital-service-banker-assignment-test -n dct-nextgen-services"'
+         }
+       }
+       stage('test') {
+         steps {
+             echo "Running Tests"
+             sleep(30)
+             sh 'ssh -t z_docker@np1microsvc1v "/home/NP1/z_docker/bin/runOCPTests.sh -p digital-service-banker-assignment-test -n dct-nextgen-services"'
+             sh 'scp z_docker@np1microsvc1v:/apps/ansible-container/build/microsvc/projects/digital-service-banker-assignment-test/test/features/reports/*.json /apps/jenkins/agent/workspace/DCT/digital-service-banker-assignment-test'
+         }
+       }
+       stage('publish') {
+         steps {
+             echo "Publishing to target repository"
+             sh 'ssh -t z_docker@np1microsvc1v "/home/NP1/z_docker/bin/runPublish.sh -p digital-service-banker-assignment-test"'
+         }
+       }
+    }
+    post {
+        always {
+          step([$class: 'Mailer',
+            notifyEveryUnstableBuild: true,
+            recipients: "nagarwal@firstrepublic.com",
+            sendToIndividuals: true])
+          cucumber '**/*.json'
+        }
+    }
+  }

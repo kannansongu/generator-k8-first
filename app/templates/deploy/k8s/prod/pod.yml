@@ -1,0 +1,60 @@
+kind: DeploymentConfig
+apiVersion: v1
+metadata:
+  namespace: dct-nextgen-services
+  name: digital-service-banker-assignment-test-apiserver
+spec:
+  template:
+    metadata:
+      labels:
+        name: digital-service-banker-assignment-test-apiserver
+    spec:
+      containers:
+        - name: digital-service-banker-assignment-test-apiserver
+          image: digital-service-banker-assignment-test-apiserver:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: FRB_SECRET_PATH
+              value: "/nodeapp/secrets"
+            - name: FRB_CONFIGMAP_PATH
+              value: "/nodeapp/configmap"
+            - name: ENVIRONMENT
+              value: "prod"
+            - name: NODE_ENV
+              value: "prod"
+          volumeMounts:
+            - name: config-volume
+              mountPath: /nodeapp/configmap
+              readOnly: true
+            - name: secret-volume
+              mountPath: /nodeapp/secrets
+              readOnly: true
+          ports:
+            - containerPort: 3905
+      volumes:
+        - name: config-volume
+          configMap:
+            name: digital-service-banker-assignment-test
+        - name: secret-volume
+          secret:
+            secretName: digital-service-banker-assignment-test-secret
+  selector:
+    name: digital-service-banker-assignment-test-apiserver
+  replicas: 2
+  triggers:
+    - type: ImageChange
+      imageChangeParams:
+        automatic: true
+        from:
+          kind: ImageStreamTag
+          name: digital-service-banker-assignment-test-apiserver:latest
+        containerNames:
+          - digital-service-banker-assignment-test-apiserver
+  strategy:
+    type: Rolling
+    rollingParams:
+      updatePeriodSeconds: 1
+      intervalSeconds: 1
+      timeoutSeconds: 120
+      maxSurge: "20%"
+      maxUnavailable: "10%"
